@@ -15,14 +15,14 @@ Ensure you have all the necessary dependencies installed. Run the following comm
 
 ```sh
 npm install
-```sh
+
 
 ### Start the Development Server
 
 Start the Vite development server to run your React application. Use the following command:
 ```sh
 npm run dev
-```sh
+
 
 ### Access the Application
 
@@ -34,7 +34,7 @@ typically http://localhost:3004.
 If you want to build the application for production, run:
 ```sh
 npm run build
-```sh
+
 
 
 ## Project Structure
