@@ -1,4 +1,4 @@
-import {type FC, useState} from "react";
+import {type FC} from "react";
 
 import CardRowItem from "components/CardIRowtem";
 import type { User } from "api/users.type";
@@ -10,27 +10,17 @@ type Props = {
 };
 
 const ContactCard:FC<Props> = ({ user }) => {
-  const [collapse,setCollapse] = useState(false);
 
-    const toggleCardCollapse = () => {
-        setCollapse(prev=>!prev)
-    }
+    const { name, email, website, phone,address,company } = user;
   return (
-    <div className={`${styles.contactCard} ${styles.collapse}`}>
-      <h2>{user.name}</h2>
-      <CardRowItem title={"Email"} text={user.email} />
-      <CardRowItem title={"Website"} text={user.website} />
-        <CardRowItem title={"Phone"} text={user.phone} />
-        {!collapse && <i onClick={toggleCardCollapse}>Show More {">>"}</i>}
-        {collapse &&
-            <>
-            <CardRowItem title={"Phone"} text={user.phone}/>
-            <CardRowItem title={"Phone"} text={user.phone}/>
-            <CardRowItem title={"Phone"} text={user.phone}/>
-            <CardRowItem title={"Phone"} text={user.phone}/>
-            <i onClick={toggleCardCollapse}>Show Less {"<<"}</i>
-            </>
-        }
+    <div className={styles.contactCard}>
+      <h2>{name}</h2>
+      <CardRowItem title={"Phone"} text={phone} />
+      <CardRowItem title={"Email"} text={email} />
+      <CardRowItem title={"Website"} text={website} />
+      <CardRowItem title={"address"} text={`${address.suite} ${address.street} ${address.city}`} />
+      <CardRowItem title={"company"} text={company.name} />
+
     </div>
   );
 };
