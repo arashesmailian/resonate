@@ -1,51 +1,69 @@
-# React + Vite
+# Resonate challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation and Setup
 
-Currently, two official plugins are available:
+### Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (>= 14.x)
+- npm or yarn
 
-## Getting Started
+### Steps
 
-### Install Dependencies
+1. **Clone the repository**:
 
-Ensure you have all the necessary dependencies installed. Run the following command in your project directory:
+   ```sh
+   git clone https://github.com/yourusername/bettermode-post-list-clone.git
+   cd bettermode-post-list-clone
+   ```
 
-```sh
-npm install
+2. **Install dependencies**:
+
+   ```sh
+   npm install --legacy-peer-deps
+   # or
+   yarn install --legacy-peer-deps
+   ```
+
+3. **Run the application**:
+
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Build the application**:
+
+   ```sh
+   npm run build
+   # or
+   yarn build
+   ```
 
 
-### Start the Development Server
-
-Start the Vite development server to run your React application. Use the following command:
-```sh
-npm run dev
-
-
-### Access the Application
-
-Open your web browser and navigate to the URL provided by the Vite development server,
-typically http://localhost:3004. 
-
-### Build for Production
-
-If you want to build the application for production, run:
-```sh
-npm run build
-
-
+## Tech Stack
+- **TypeScript**
+- **React**
+- **Vite**
+- **Axios**
+- **React-query**
 
 ## Project Structure
 
- - src/: Contains the source code of the application.
- - public/: Contains static assets.
- - vite.config.js: Vite configuration file.
-
-## Technologies Used
- - TypeScript
- - React
- - Vite
- - Axios
- - React-query
+src/
+├── api/
+│ ├── queryKeys.ts
+│ ├── users.ts
+│ └── users.type.ts
+├── components/
+│ ├── CardRowItem
+│ ├── ContactCard
+│ └── ContactsList
+├── providers/
+│ └── QueryClientProvider.tsx
+├── services/
+│ ├── config.ts
+│ └── queryClient.ts
+├── App.tsx
+├── main.tsx
+└── global.d.ts

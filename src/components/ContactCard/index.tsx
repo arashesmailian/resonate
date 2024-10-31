@@ -1,6 +1,6 @@
 import {type FC} from "react";
 
-import CardRowItem from "components/CardIRowtem";
+import CardRowItem from "components/CardRowItem";
 import type { User } from "api/users.type";
 
 import styles from "./contact_card.module.scss";
