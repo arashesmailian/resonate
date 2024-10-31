@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0.5rem;
+}
+.title{
+  display: inline-block;
+  color: #7c8bcc;
+}
+.text{
+  color: #616872;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
